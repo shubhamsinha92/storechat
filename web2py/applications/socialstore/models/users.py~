@@ -1,0 +1,10 @@
+# coding: utf8
+from gluon.tools import Auth
+user_extra_fields = [Field('hobby'), ...]
+tutor_extra_fields = [Field('telephone', ...]
+
+auth.settings.extra_fields['auth_user'] = (
+    [Field('user_type', requires=IS_IN_SET(['User', 'Store']))] +
+    user_extra_fields + _extra_fields
+
+
